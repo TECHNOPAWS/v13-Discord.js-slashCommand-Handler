@@ -8,7 +8,7 @@ const { commands } = require(`../Handlers/slashCommands.js`)
 const fetch = require(`node-fetch`)
 
 //Check whether commands should be registered globally or not. (**This can be toggled from the config.json file by changing the value of isGlobal to false**)
-const { isGlobal, testGuildId } = require(`${process.cwd()}/config.json`)
+const { isGlobal, guildId } = require(`${process.cwd()}/config.json`)
 
 //Import chalk
 
@@ -52,7 +52,7 @@ module.exports = {
       }
     } else {
       //If not global, then register the command to a guild
-     let guildRegister = await fetch(`https://discord.com/api/v9/applications/${client.user.id}/guilds/${testGuildId}/commands`, {
+     let guildRegister = await fetch(`https://discord.com/api/v9/applications/${client.user.id}/guilds/${guildId}/commands`, {
         method: `PUT`,
         headers: {
           authorization: `Bot ${client.token}`,

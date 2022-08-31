@@ -1,5 +1,4 @@
 entrypoint = "index.js"
-
 hidden = [".config"]
 
 [interpreter]
@@ -36,12 +35,6 @@ language = "nodejs"
 
 [unitTest]
 language = "nodejs"
-
-[languages.javascript]
-pattern = "**/{*.js,*.jsx,*.ts,*.tsx}"
-
-  [languages.javascript.languageServer]
-  start = [ "typescript-language-server", "--stdio" ]
 
 [debugger]
 support = true
@@ -82,3 +75,11 @@ support = true
       sourceMaps = true
       stopOnEntry = false
       type = "pwa-node"
+
+[languages]
+
+[languages.javascript]
+pattern = "**/{*.js,*.jsx,*.ts,*.tsx}"
+
+[languages.javascript.languageServer]
+start = "typescript-language-server --stdio"
