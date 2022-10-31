@@ -1,4 +1,4 @@
 {
   "isGlobal": false,
-  "guildId": "[Insert your server ID here]"
+  "guildId": "[If single guild, Insert your server ID here, else leave it empty]"
 }
